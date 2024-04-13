@@ -1,0 +1,26 @@
+import clipboard
+from util import keyboard_read_lines
+
+'''
+level: ##
+
+Input:
+#...
+#  ...
+####...
+#...
+
+Output:
+## ...
+## ...
+## ...
+## ...
+'''
+
+level = "###"
+
+linhas = keyboard_read_lines()
+
+text = "\n".join([f"{level} {linha.lstrip("#").lstrip(" ")}" for linha in linhas])
+
+clipboard.copy(text)
